@@ -7,18 +7,17 @@ services:
       - ./public_html/index.html:/public_html/index.html
     ports:
       - 80:80
-      - 443:443
 
-#   frontend:
-#       restart: unless-stopped
-#       image: staticfloat/nginx-certbot
-#       ports:
-#           - 80:80/tcp
-#           - 443:443/tcp
-#       environment:
-#           CERTBOT_EMAIL: owner@company.com
-#       volumes:
-#         - ./conf.d:/etc/nginx/user.conf.d:ro
-#         - letsencrypt:/etc/letsencrypt
-# volumes:
-#     letsencrypt:
+  frontend:
+      restart: unless-stopped
+      image: staticfloat/nginx-certbot
+      # ports:
+      #     - 80:80/tcp
+      #     - 443:443/tcp
+      environment:
+          CERTBOT_EMAIL: owner@company.com
+      volumes:
+        # - ./conf.d:/etc/nginx/user.conf.d:ro
+        - letsencrypt:/etc/letsencrypt
+volumes:
+    letsencrypt:
