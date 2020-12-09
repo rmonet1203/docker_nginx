@@ -1,5 +1,5 @@
 2020-12-09 05:00:46,961:DEBUG:certbot._internal.main:certbot version: 1.10.1
-2020-12-09 05:00:46,962:DEBUG:certbot._internal.main:Arguments: ['--webroot', '--webroot-path=/usr/share/nginx/html/letsencrypt', '--email', 'rio@dimasrio.com', '--agree-tos', '--no-eff-email', '-d', 'centz.dimasrio.com']
+2020-12-09 05:00:46,962:DEBUG:certbot._internal.main:Arguments: ['--webroot', '--webroot-path=/usr/share/nginx/html/letsencrypt', '--email', 'rio@dimasrio.com', '--agree-tos', '--no-eff-email', '-d', 'fapi.litekart.in']
 2020-12-09 05:00:46,962:DEBUG:certbot._internal.main:Discovered plugins: PluginsRegistry(PluginEntryPoint#manual,PluginEntryPoint#null,PluginEntryPoint#standalone,PluginEntryPoint#webroot)
 2020-12-09 05:00:47,106:DEBUG:certbot._internal.log:Root logging level set at 20
 2020-12-09 05:00:47,107:INFO:certbot._internal.log:Saving debug log to /var/log/letsencrypt/letsencrypt.log
@@ -97,11 +97,11 @@ Strict-Transport-Security: max-age=604800
 2020-12-09 05:00:49,540:DEBUG:acme.client:Storing nonce: 0004u5zd0QMPIoQYLTwo1ZSPpcJLa1xAoiJnhukeGaX7Zd0
 2020-12-09 05:00:49,560:DEBUG:certbot.display.util:Notifying user: Account registered.
 2020-12-09 05:00:49,561:DEBUG:certbot._internal.main:Picked account: <Account(RegistrationResource(body=Registration(key=JWKRSA(key=<ComparableRSAKey(<cryptography.hazmat.backends.openssl.rsa._RSAPublicKey object at 0x7f8b167c6190>)>), contact=('mailto:rio@dimasrio.com',), agreement=None, status='valid', terms_of_service_agreed=None, only_return_existing=None, external_account_binding=None), uri='https://acme-v02.api.letsencrypt.org/acme/acct/105763110', new_authzr_uri=None, terms_of_service='https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf'), 509d788bbd8fdaa5a9ba99a37e1bd91a, Meta(creation_dt=datetime.datetime(2020, 12, 9, 5, 0, 49, tzinfo=<UTC>), creation_host='dcf3c7e9ed0a', register_to_eff=None))>
-2020-12-09 05:00:49,564:DEBUG:certbot.display.util:Notifying user: Requesting a certificate for centz.dimasrio.com
+2020-12-09 05:00:49,564:DEBUG:certbot.display.util:Notifying user: Requesting a certificate for fapi.litekart.in
 2020-12-09 05:00:49,728:DEBUG:certbot.crypto_util:Generating RSA key (2048 bits): /etc/letsencrypt/keys/0000_key-certbot.pem
 2020-12-09 05:00:49,733:DEBUG:certbot.crypto_util:Creating CSR: /etc/letsencrypt/csr/0000_csr-certbot.pem
 2020-12-09 05:00:49,734:DEBUG:acme.client:JWS payload:
-b'{\n  "identifiers": [\n    {\n      "type": "dns",\n      "value": "centz.dimasrio.com"\n    }\n  ]\n}'
+b'{\n  "identifiers": [\n    {\n      "type": "dns",\n      "value": "fapi.litekart.in"\n    }\n  ]\n}'
 2020-12-09 05:00:49,735:DEBUG:acme.client:Sending POST request to https://acme-v02.api.letsencrypt.org/acme/new-order:
 {
   "protected": "eyJhbGciOiAiUlMyNTYiLCAia2lkIjogImh0dHBzOi8vYWNtZS12MDIuYXBpLmxldHNlbmNyeXB0Lm9yZy9hY21lL2FjY3QvMTA1NzYzMTEwIiwgIm5vbmNlIjogIjAwMDR1NXpkMFFNUElvUVlMVHdvMVpTUHBjSkxhMXhBb2lKbmh1a2VHYVg3WmQwIiwgInVybCI6ICJodHRwczovL2FjbWUtdjAyLmFwaS5sZXRzZW5jcnlwdC5vcmcvYWNtZS9uZXctb3JkZXIifQ",
@@ -130,7 +130,7 @@ Strict-Transport-Security: max-age=604800
   "identifiers": [
     {
       "type": "dns",
-      "value": "centz.dimasrio.com"
+      "value": "fapi.litekart.in"
     }
   ],
   "authorizations": [
@@ -165,7 +165,7 @@ Strict-Transport-Security: max-age=604800
 {
   "identifier": {
     "type": "dns",
-    "value": "centz.dimasrio.com"
+    "value": "fapi.litekart.in"
   },
   "status": "pending",
   "expires": "2020-12-16T05:00:49Z",
@@ -192,7 +192,7 @@ Strict-Transport-Security: max-age=604800
 }
 2020-12-09 05:00:50,530:DEBUG:acme.client:Storing nonce: 0004iOHN95HLGdNX0ln8i9x1kgE6XNjX8vU6dZfPyivjjC4
 2020-12-09 05:00:50,531:INFO:certbot._internal.auth_handler:Performing the following challenges:
-2020-12-09 05:00:50,531:INFO:certbot._internal.auth_handler:http-01 challenge for centz.dimasrio.com
+2020-12-09 05:00:50,531:INFO:certbot._internal.auth_handler:http-01 challenge for fapi.litekart.in
 2020-12-09 05:00:50,532:INFO:certbot._internal.plugins.webroot:Using the webroot path /usr/share/nginx/html/letsencrypt for all unmatched domains.
 2020-12-09 05:00:50,532:DEBUG:certbot._internal.plugins.webroot:Creating root challenges validation dir at /usr/share/nginx/html/letsencrypt/.well-known/acme-challenge
 2020-12-09 05:00:50,542:DEBUG:certbot._internal.plugins.webroot:Attempting to save validation to /usr/share/nginx/html/letsencrypt/.well-known/acme-challenge/SSGUbpNPtwNHxjgvpcZ3FVkRtNwqYht1__Ms-YX7qEg
@@ -254,7 +254,7 @@ Strict-Transport-Security: max-age=604800
 {
   "identifier": {
     "type": "dns",
-    "value": "centz.dimasrio.com"
+    "value": "fapi.litekart.in"
   },
   "status": "pending",
   "expires": "2020-12-16T05:00:49Z",
@@ -306,7 +306,7 @@ Strict-Transport-Security: max-age=604800
 {
   "identifier": {
     "type": "dns",
-    "value": "centz.dimasrio.com"
+    "value": "fapi.litekart.in"
   },
   "status": "invalid",
   "expires": "2020-12-16T05:00:49Z",
@@ -316,7 +316,7 @@ Strict-Transport-Security: max-age=604800
       "status": "invalid",
       "error": {
         "type": "urn:ietf:params:acme:error:dns",
-        "detail": "DNS problem: NXDOMAIN looking up A for centz.dimasrio.com - check that a DNS record exists for this domain",
+        "detail": "DNS problem: NXDOMAIN looking up A for fapi.litekart.in - check that a DNS record exists for this domain",
         "status": 400
       },
       "url": "https://acme-v02.api.letsencrypt.org/acme/chall-v3/9174723263/iWkX9g",
@@ -325,13 +325,13 @@ Strict-Transport-Security: max-age=604800
   ]
 }
 2020-12-09 05:00:55,678:DEBUG:acme.client:Storing nonce: 0003WhEaPhFUk0ftqF92XDxJwAc-duPtRgtYStSeZN7ZBFY
-2020-12-09 05:00:55,680:WARNING:certbot._internal.auth_handler:Challenge failed for domain centz.dimasrio.com
-2020-12-09 05:00:55,681:INFO:certbot._internal.auth_handler:http-01 challenge for centz.dimasrio.com
+2020-12-09 05:00:55,680:WARNING:certbot._internal.auth_handler:Challenge failed for domain fapi.litekart.in
+2020-12-09 05:00:55,681:INFO:certbot._internal.auth_handler:http-01 challenge for fapi.litekart.in
 2020-12-09 05:00:55,683:DEBUG:certbot._internal.reporter:Reporting to user: The following errors were reported by the server:
 
-Domain: centz.dimasrio.com
+Domain: fapi.litekart.in
 Type:   dns
-Detail: DNS problem: NXDOMAIN looking up A for centz.dimasrio.com - check that a DNS record exists for this domain
+Detail: DNS problem: NXDOMAIN looking up A for fapi.litekart.in - check that a DNS record exists for this domain
 2020-12-09 05:00:55,685:DEBUG:certbot._internal.error_handler:Encountered exception:
 Traceback (most recent call last):
   File "/opt/certbot/src/certbot/certbot/_internal/auth_handler.py", line 91, in handle_authorizations

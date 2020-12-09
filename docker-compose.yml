@@ -16,7 +16,7 @@ services:
   
   certbot:
      image: certbot/certbot:latest
-     command: certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email rio@dimasrio.com --agree-tos --no-eff-email -d centz.dimasrio.com
+     command: certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email rio@dimasrio.com --agree-tos --no-eff-email -d fapi.litekart.in
      volumes:
        - ./certbot/conf/:/etc/letsencrypt
        - ./certbot/logs/:/var/log/letsencrypt
