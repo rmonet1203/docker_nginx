@@ -1,23 +1,23 @@
 version: '3'
 services:
-  temp-web-server:
-    build: .
-    restart: always
-    volumes:
-      - ./public_html/index.html:/public_html/index.html
-    ports:
-      - 80:80
+  # temp-web-server:
+  #   build: .
+  #   restart: always
+  #   volumes:
+  #     - ./public_html/index.html:/public_html/index.html
+  #   ports:
+  #     - 80:80
 
   frontend:
       restart: unless-stopped
       image: staticfloat/nginx-certbot
-      # ports:
-      #     - 80:80/tcp
-      #     - 443:443/tcp
+      ports:
+          - 80:80/tcp
+          - 443:443/tcp
       environment:
           CERTBOT_EMAIL: owner@company.com
       volumes:
-        # - ./conf.d:/etc/nginx/user.conf.d:ro
+        - ./conf.d:/etc/nginx/user.conf.d:ro
         - letsencrypt:/etc/letsencrypt
 volumes:
     letsencrypt:
