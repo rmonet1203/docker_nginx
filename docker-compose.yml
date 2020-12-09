@@ -1,23 +1,24 @@
-version: '3.4'
-
-services: 
-  web:
-    image: nginx:1.14.2-alpine
+version: '3'
+services:
+  temp-web-server:
+    build: .
     restart: always
     volumes:
-      - ./public_html:/public_html
-      - ./conf.d:/etc/nginx/conf.d/
-      - ./dhparam:/etc/nginx/dhparam
-      - ./certbot/conf/:/etc/nginx/ssl/
-      - ./certbot/data:/usr/share/nginx/html/letsencrypt
+      - ./public_html/index.html:/public_html/index.html
     ports:
       - 80:80
       - 443:443
-  
-  certbot:
-     image: certbot/certbot:latest
-     command: certonly --webroot --webroot-path=/usr/share/nginx/html/letsencrypt --email rio@dimasrio.com --agree-tos --no-eff-email -d fapi.litekart.in
-     volumes:
-       - ./certbot/conf/:/etc/letsencrypt
-       - ./certbot/logs/:/var/log/letsencrypt
-       - ./certbot/data:/usr/share/nginx/html/letsencrypt
+
+#   frontend:
+#       restart: unless-stopped
+#       image: staticfloat/nginx-certbot
+#       ports:
+#           - 80:80/tcp
+#           - 443:443/tcp
+#       environment:
+#           CERTBOT_EMAIL: owner@company.com
+#       volumes:
+#         - ./conf.d:/etc/nginx/user.conf.d:ro
+#         - letsencrypt:/etc/letsencrypt
+# volumes:
+#     letsencrypt:
